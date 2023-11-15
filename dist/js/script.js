@@ -149,11 +149,15 @@ const select = {
           }
         }
       }
+      price *= thisProduct.amountWidget.value;
       thisProduct.priceElem.innerHTML = price;
     }
     initAmountWidget(){
       const thisProduct = this;
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+      thisProduct.amountWidgetElem.addEventListener('updated', () =>{
+        thisProduct.processOrder();
+      });
     }
   }
 
@@ -166,6 +170,7 @@ const select = {
       thisWidget.setValue(thisWidget.input.value);
       thisWidget.initActions();
     }
+
     getElements(element){
       const thisWidget = this;
 
@@ -174,6 +179,7 @@ const select = {
       thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
       thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
     }
+
     setValue(value){
       const thisWidget = this;
       const newValue = parseInt(value);
@@ -188,7 +194,9 @@ const select = {
         thisWidget.value = settings.amountWidget.defaultMax;
       }
       thisWidget.input.value = thisWidget.value;
+      thisWidget.announce();
     }
+
     initActions(){
       const thisWidget = this;
       thisWidget.input.addEventListener('change', (event) =>{
@@ -204,7 +212,11 @@ const select = {
         thisWidget.setValue(thisWidget.value +1);
       });
     }
-
+    announce(){
+      const thisWidget = this;
+      const event = new Event('updated');
+      thisWidget.element.dispatchEvent(event);
+    }
   }
 
   const app = {
