@@ -167,8 +167,13 @@ const select = {
       console.log('AmountWidget:', thisWidget);
       console.log('constructor arguments:', element);
       thisWidget.getElements(element);
-      thisWidget.setValue(thisWidget.input.value);
-      thisWidget.initActions();
+      // thisWidget.setValue(thisWidget.input.value);
+      if (thisWidget.input.value === '' || thisWidget.input.value === undefined ) {
+        thisWidget.setValue(settings.amountWidget.defaultValue)
+      } else {
+        thisWidget.setValue(thisWidget.input.value);
+      }
+        thisWidget.initActions();
     }
 
     getElements(element){
@@ -199,8 +204,7 @@ const select = {
 
     initActions(){
       const thisWidget = this;
-      thisWidget.input.addEventListener('change', (event) =>{
-        // event.preventDefault();
+      thisWidget.input.addEventListener('change', () =>{
         thisWidget.setValue(thisWidget.input.value);
       });
       thisWidget.linkDecrease.addEventListener('click', (event) =>{
