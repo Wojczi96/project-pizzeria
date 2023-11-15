@@ -181,6 +181,12 @@ const select = {
       if(thisWidget.value !== newValue && !isNaN(newValue)) {
         thisWidget.value = newValue;
       }
+      if(thisWidget.value < settings.amountWidget.defaultMin){
+        thisWidget.value = settings.amountWidget.defaultMin;
+      }
+      if(thisWidget.value > settings.amountWidget.defaultMax){
+        thisWidget.value = settings.amountWidget.defaultMax;
+      }
       thisWidget.input.value = thisWidget.value;
     }
     initActions(){
