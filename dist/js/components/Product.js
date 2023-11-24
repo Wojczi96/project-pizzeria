@@ -14,7 +14,6 @@ class Product{
       thisProduct.initOrderForm();
       thisProduct.initAmountWidget();
       thisProduct.processOrder();
-      // console.log('new Product:', thisProduct);
     }
     renderInMenu(){
       const thisProduct = this;

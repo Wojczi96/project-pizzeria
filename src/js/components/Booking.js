@@ -1,5 +1,4 @@
 import {select, templates} from '../settings.js';
-// import { utils } from '../utils.js';
 import AmountWidget from './AmountWidget.js';
 
 class Booking{
@@ -19,13 +18,12 @@ class Booking{
     }
     initWidgets(){
         const thisBooking = this;
-        thisBooking.peopleAmountWidget = new AmountWidget(thisBooking.dom.peopleAmount);
-        thisBooking.hoursAmountWidget = new AmountWidget(thisBooking.dom.hoursAmount);
-        thisBooking.peopleAmountWidget.addEventListener('click', function(){
-
+        thisBooking.peopleAmount = new AmountWidget(thisBooking.dom.peopleAmount);
+        thisBooking.dom.peopleAmount.addEventListener('click', function(){
         });
-        thisBooking.hoursAmountWidget.addEventListener('click', function(){
 
+        thisBooking.hoursAmount = new AmountWidget(thisBooking.dom.hoursAmount);
+        thisBooking.dom.hoursAmount.addEventListener('click', function(){
         });
     }
 
