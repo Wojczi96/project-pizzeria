@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="./vendor/range-slider.min.css">
@@ -78,21 +79,21 @@
   <script id="template-home" type="text/x-handlebars-template">
     <div class="main-home">
       <div class="nav-home-wrapper">
-        <div class="box-home">
+        <div class="box-home food-order">
           <div class="foto">
             <img src="images/pizza-1.jpg" alt="pizza">
           </div>
           <div class="order-booking">
-            <a href="#order"><h3>ORDER ONLINE</h3></a>
+            <h3>ORDER ONLINE</h3>
             <p>Delicious food delivered to your door</p>
           </div>
         </div>
-        <div class="box-home">
+        <div class="box-home table-order">
           <div class="foto">
             <img src="images/pizza-2.jpg" alt="people">
           </div>
           <div class="order-booking">
-            <a href="#booking"><h3>BOOK A TABLE</h3></a>
+            <h3>BOOK A TABLE</h3>
             <p>Enjoy your time in our restaurant</p>
           </div>
         </div>
@@ -105,7 +106,6 @@
 
     <section>
       <div class="main-carousel" data-flickity='{ "autoPlay": true }'>
-        <!-- <div class="carousel-main"> -->
           <div class="carousel-cell">
             <div class="carousel-wrapper">
               <div class="foto-carousel">
@@ -140,7 +140,7 @@
               <div class="opinion">
                 <h3>Friendly For Pets</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quod enim. Ea, illo. Nihil, tenetur!</p>
-                <p class="name">~Jhon Cena</p>
+                <p class="name">~John Cena</p>
               </div>
             </div>
           </div>
@@ -157,7 +157,64 @@
               </div>
             </div>
           </div>
-        <!-- </div> -->
+      </div>
+    </section>
+
+    <section>
+      <div class="gallery-wrapper">
+        <div class="gallery">
+          <div class="gallery-foto">
+            <div class="foto-wrapper">
+              <img src="images/pizza-4.jpg" alt="food">
+              <div class="icon-wrapper">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+
+            <div class="foto-wrapper">
+              <img src="images/pizza-5.jpg" alt="food">
+              <div class="icon-wrapper">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+
+            <div class="foto-wrapper">
+              <img src="images/pizza-6.jpg" alt="pizza">
+              <div class="icon-wrapper">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="gallery-foto">
+            <div class="foto-wrapper">
+              <img src="images/pizza-7.jpg" alt="sign">
+              <div class="icon-wrapper">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+
+            <div class="foto-wrapper">
+              <img src="images/pizza-8.jpg" alt="flour">
+              <div class="icon-wrapper">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+
+            <div class="foto-wrapper">
+              <img src="images/pizza-9.jpg" alt="sign">
+              <div class="icon-wrapper">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </script>
@@ -336,7 +393,7 @@
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="./vendor/range-slider.min.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/app.js" type="module"></script>

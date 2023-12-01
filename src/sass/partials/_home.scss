@@ -22,6 +22,7 @@
     height: 150px;
     width: 300px;
     position: relative;
+    cursor: pointer;
 }
 .foto img {
     height: 150px;
@@ -29,15 +30,13 @@
     border-radius: $radius;
     object-fit: cover;
 }
-.box-home a {
-    text-decoration: none;
-    color: $color-light;
-}
 .box-home p {
     opacity: 0;
     margin-bottom: 0;
 }
 .box-home h3 {
+    text-decoration: none;
+    color: $color-light;
     margin: 36px 0 0 0;
 }
 
@@ -68,8 +67,8 @@
     color: $color-light;
     text-align: center;
     flex: 100%;
-    margin: ($base-size/2) 0;
-    padding: ($base-size*2) 0;
+    margin: ($base-size / 2) 0;
+    padding: ($base-size * 2) 0;
 }
 
 .open h3 {
@@ -79,8 +78,9 @@
   /*Carousel */
 
 .carousel-main {
-    margin: 0 auto;
-    padding-top: 50px;
+    height: 300px;
+    margin: 50px 0;
+    padding: 20px 0 0 0;
 
     &.carousel-cell {
     counter-increment: gallery-cell;
@@ -93,6 +93,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 .foto-carousel img {
@@ -101,9 +102,83 @@
     object-fit: cover;
     padding-right: 20px;
 }
+.opinion p {
+    padding-right: 40px;
+}
 .opinion h3 {
     font-size: large;
 }
 .name {
     font-weight: bold;
 }
+
+/* Gallery */
+.gallery {
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.gallery-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+}
+.gallery-foto img {
+    height: 170px;
+    width: 190px;
+    object-fit: cover;
+}
+.foto-wrapper {
+    position: relative;
+
+    &::before {
+        content: "";
+        background-color: black;
+        width: 190px;
+        height: 170px;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .icon-wrapper {
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        position: absolute;
+        z-index: 3;
+    }
+    .icon-wrapper i {
+        opacity: 0;
+        position: relative;
+        top: 100px;
+        color: white;
+        margin-left: 10px;
+    }
+    .icon-wrapper i:hover {
+        color: $color-main;
+    }
+    &:focus,
+    &:hover {
+        &:before,
+        i {
+            opacity: 1;
+        }
+
+        &:before {
+            top: 0;
+            opacity: 0.6;
+        }
+
+        i {
+            top: -110px;
+            left: 60px;
+        }
+    }
+
+}
+
+

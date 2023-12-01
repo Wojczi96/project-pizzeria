@@ -25,6 +25,10 @@ export const select = {
         amountWidget: '.widget-amount',
         cartButton: '[href="#add-to-cart"]',
       },
+      home: {
+        foodOrder: '.food-order',
+        tableOrder: '.table-order',
+      },
       widgets: {
         amount: {
           input: 'input.amount',
