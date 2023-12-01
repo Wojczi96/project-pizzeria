@@ -115,7 +115,7 @@
 /* Gallery */
 .gallery {
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 0 0;
 }
 
 .gallery-foto {
@@ -178,6 +178,10 @@
             left: 60px;
         }
     }
+
+}
+.ins a {
+    color: $color-main;
 
 }
 
